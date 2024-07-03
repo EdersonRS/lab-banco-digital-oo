@@ -1,0 +1,10 @@
+# Ignora todos os arquivos binários
+bin/*
+
+# Ignora todos os diretórios de compilação
+target/
+
+# Ignora arquivos gerados pelo eclipse
+.project
+.classpath
+.settings/*

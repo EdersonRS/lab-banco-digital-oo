@@ -1,5 +1,4 @@
 
-
 public abstract class Conta implements IConta {
 	
 	private static final int AGENCIA_PADRAO = 1;
@@ -17,7 +16,7 @@ public abstract class Conta implements IConta {
 	}
 
 	@Override
-	public void sacar(double valor) throws SaldoInsufienteException {
+	public void sacar(double valor) {
 		saldo -= valor;
 	}
 
@@ -27,7 +26,7 @@ public abstract class Conta implements IConta {
 	}
 
 	@Override
-	public void transferir(double valor, IConta contaDestino) throws SaldoInsufienteException {
+	public void transferir(double valor, IConta contaDestino) {
 		this.sacar(valor);
 		contaDestino.depositar(valor);
 	}
